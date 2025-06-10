@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --main-transtion: 0.3s;
+  --head-color: #11284b;
+  --font-color: #381fd1;
+  --main-color: #fff;
+  --footer-color: #f3f2fc;
+  --nav-color: #f6f6eb;
+  box-sizing: border-box;
+}
+
+.parent .nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-color: var(--nav-color);
+}
+
+.parent .nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 0.5;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.parent .nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: var(--main-transtion);
+  -webkit-transition: var(--main-transtion);
+  -moz-transition: var(--main-transtion);
+  -ms-transition: var(--main-transtion);
+  -o-transition: var(--main-transtion);
+  color: var(--font-color);
+  margin: 0 15px;
+}
+
+.parent .nav ul li {
+  position: relative;
+  margin-top: 10px;
+}
+
+.parent .nav ul li a:hover {
+  text-decoration: underline;
+  opacity: 0.7;
+}
+
+.parent .nav ul li:last-of-type a {
+  background-color: var(--font-color);
+  color: white;
+  padding: 8px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.parent .nav ul li:first-of-type a::after {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-color: var(--font-color) transparent transparent transparent;
+  border-width: 5px;
+  border-style: solid;
+  top: 8px;
+  right: 0;
+}
+
+.parent .container {
+  position: relative;
+  margin: 40px auto;
+  padding: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  align-items: flex-start;
+}
+
+.parent .container .left {
+  background-color: #fff;
+  line-height: 2;
+  padding: 0 5px;
+  font-weight: 600;
+  margin-right: 30px;
+}
+
+.parent .container .left input {
+  height: 30px;
+  transition: var(--main-transtion);
+  -webkit-transition: var(--main-transtion);
+  -moz-transition: var(--main-transtion);
+  -ms-transition: var(--main-transtion);
+  -o-transition: var(--main-transtion);
+}
+
+.parent .container .left input:focus {
+  outline: none;
+  box-shadow: 0px 0px 6px 4px var(--font-color)
+}
+
+.parent .container .left a {
+  text-decoration: none;
+  color: #6c6c6e;
+}
+
+.parent .container .left a:hover {
+  color: var(--font-color);
+}
+
+.parent .container .left .cont {
+  background-color: #f3f2fc;
+  padding: 15px;
+  text-align: center;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.parent .container .left .cont input {
+  background-color: var(--font-color);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  color: white;
+  padding: 20px;
+  border: none;
+}
+
+.parent .container .right .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  flex-wrap: wrap;
+}
+
+.parent .container .right .head a {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.parent .container .right .content-img {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 60px;
+}
+
+.parent .container .right .content-img div {
+  border: 2px solid #ececed;
+  padding: 25px;
+  border-radius: 15px;
+  grid-template-columns: repeat(3, auto);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  font-weight: bold;
+}
+
+.parent .container .right .content-img div img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.parent .container .right .content-img div a {
+  text-decoration: none;
+}
+
+.parent .container .right .content-img div .title {
+  color: var(--font-color);
+}
+
+.parent .container .right .under {
+  margin-top: 50px;
+}
+
+.parent .container .right .under .content-img-2 {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 20px;
+}
+
+.parent .container .right .under .content-img-2 div img {
+  margin-top: 20px;
+  width: 210px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+footer {
+  width: 100%;
+  background-color: #10284b;
+  color: var(--footer-color);
+}
+
+footer .one {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
+}
+
+footer .parent-2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  line-height: 1.6;
+  flex-wrap: wrap;
+}
+
+footer .parent-2 div .frist {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+footer .parent-2 div p a {
+  text-decoration: none;
+  color: var(--footer-color);
+  transition: var(--main-transtion);
+  -webkit-transition: var(--main-transtion);
+  -moz-transition: var(--main-transtion);
+  -ms-transition: var(--main-transtion);
+  -o-transition: var(--main-transtion);
+}
+
+footer .parent-2 div p a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width : 600px) {
+  .parent .nav ul {
+    justify-content: center;
+  }
+
+  .parent .container .right .content-img {
+    grid-template-columns: repeat(1, auto);
+  }
+
+  .parent .container .right .content-img div {
+    width: 270px;
+  }
+
+  .parent .container .right .under .content-img-2 {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+
+@media (min-width : 600px) {
+  .parent .nav ul {
+    justify-content: center;
+  }
+
+  .parent .container .right .under .content-img-2 {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .parent .container .right .content-img {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media (min-width : 768px) {
+  .parent .nav ul {
+    justify-content: space-between;
+  }
+
+  .parent .container .right .content-img {
+    grid-template-columns: repeat(3, auto);
+  }
+
+  .parent .container .right .under .content-img-2 {
+    grid-template-columns: repeat(3, auto);
+  }
+
+}
+
+@media (min-width : 992px) {}
